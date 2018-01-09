@@ -1,0 +1,24 @@
+/* pages/dashboard/dashboard.wxss */
+
+
+.blocktitlebar{
+  display: flex;
+  align-content: center;
+  background-color: lightgrey;
+  flex-direction: row; 
+  border-radius: 2%;
+  text-align:center;
+}
+
+.blocktitletext{   
+  font-size:x-large;  
+}
+
+
+
+
+.on{ 
+  color: #f10b2e; 
+  border-radius: 10%;
+  background-color: lightgrey;   
+} 

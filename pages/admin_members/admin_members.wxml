@@ -1,0 +1,53 @@
+<!--pages/admin_members/admin_members.wxml-->
+<!--pages/regster/register.wxml-->
+
+
+<label class="winTitle">会员资料修改</label>
+
+<view class="regitem">
+  <label class="reglabel">昵称：</label>
+  <input class='reginput' type="text" disabled = "true"  value="{{selectedMemberInfo.alias}}" />
+</view>
+
+<view class="regitem">
+  <label class="reglabel">姓：</label>
+  <input class='reginput' disabled = "true" value="{{selectedMemberInfo.lastName}}"  />
+</view>
+
+<view class="regitem">
+  <label class="reglabel">名：</label>
+  <input class='reginput' disabled = "true"  value= "{{selectedMemberInfo.firstName}}" />  
+</view>
+
+<view class="regitem">
+  <label class="reglabel">手机：</label>
+  <input class='reginput' disabled = "true"  value='{{selectedMemberInfo.telephone}}'/>  
+</view>
+<view class="regitem">
+  <label class="reglabel">邮箱：</label>
+  <input class='reginput' disabled = "true"  value="{{selectedMemberInfo.email}}"/>  
+</view>
+
+<view class="regitem">
+  <label class="reglabel">性别：</label>
+  <input class='reginput' disabled = "true"  value="{{genderArray[selectedMemberInfo.sex]}}"/>      
+</view>
+
+<view class="regitem">
+  <label class="reglabel">生日：</label>
+  <input class="reginput" disabled = "true"  mode="date" value="{{selectedMemberInfo.birthday}}" > </input>
+</view>
+
+<view class="regitem">
+  <label class="reglabel">有效期：</label>
+  <picker class="reginput" mode="date" value="{{selectedMemberInfo.validTo}}" bindchange="bindDateChange">
+    <view > 
+      {{selectedMemberInfo.validTo}}
+    </view>
+  </picker>
+</view>
+
+
+ <button class="regbutton" bindtap="bindSavePress">保存</button>
+
+

@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasMemberInfo}}">
+      <text>欢迎您: {{userInfo.nickName}}，加载ing...会员请骚候</text>
+    </block>
+    <block wx:else>
+      <text>欢迎回来: {{memberInfo.alias}}</text>
+    </block>
+
+    <block wx:if="{{noMemberInfo}}"  >
+      <button bindtap="bindGo2Reg">非会员请注册</button>
+    </block>
+  </view>
+  <text style='font-size: xx-small; width:100%; text-align: right; color:grey'>b2.0</text>
+  
+  <image src="/images/index_banner.jpg" mode="widthFix" style='width:100%' bindlongpress='goAdminPage'> </image>
+
+  <view class="clubintro">
+    <text style='font-weight:bold; font-size:large; font: Tahoma;'> “拖家带口”俱乐部简介  </text>
+    <text style= 'font: Tahoma; font-size: small;'>\n 成都首家正式注册的铁人三项俱乐部，发起人为几个羽毛球选手，包括前中国国家集训队运动员朱敏。朱老师退居幕后以后，俱乐部由新一代的开山怪苗苗掌舵，人送外号“小舵举“。\n\n近年来，随着老将春煦的北上和巴斯领衔的新一代实力战将的加入，以舵举海涛毛毛为首的330老势力受到了前所未有的挑战，最后不得不退出主力选手队伍，现在主要担任替补运动员和从事俱乐部后勤工作。\n\n 有道是：
+    </text>    
+    <text style=' font-size: small; font: Tahoma; font-weight:bold;'>长江后浪推前浪，双双倒在沙滩上!</text>
+  </view>
+
+  
+</view>

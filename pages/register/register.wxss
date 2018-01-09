@@ -1,0 +1,58 @@
+/* pages/regster/register.wxss */
+
+
+
+.regtitler {
+  display: flex;
+  flex-direction: column;
+  height: 100rpx;
+  align-items: center;  
+}
+
+.regitem {
+  
+  display: flex;
+  flex-direction:  row;
+  align-items: right;
+  justify-content: space-between;
+  margin:5;
+  margin-bottom: 5px;
+  font-size:  x-large;
+ 
+}
+
+.reglabel{
+  text-align: right;
+  font-size:  x-large;
+  flex: 2.5;
+  width: 100%;
+}
+
+.regtext{
+  text-align: right;
+  font-size:  x-large;
+  flex: 2.5;
+   width: 100%;
+  
+}
+
+.reginput{  
+  flex: 5.5;  
+  background-color: #ebebeb;
+  align-self: center;
+  font-size: large;
+  height: 100%;
+}
+
+.regnote{
+  flex: 3;  
+  font-size:  small;
+  
+}
+.regbutton{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center; 
+
+}

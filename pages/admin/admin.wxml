@@ -1,0 +1,44 @@
+<!--pages/admin/admin.wxml-->
+<view class="swiper-tab">
+  <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">会籍</view>
+  <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">保留</view>
+  <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">保留</view>
+  <view class="swiper-tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">保留</view>
+
+</view>
+
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:1050rpx" >
+  <swiper-item>
+    <view class='matchHistoryTitleBar'>
+      <text class='widthf1'>No</text>
+      <text class='widthf4'>爱称</text>
+      <text class='widthf4'>姓名</text>
+      <text class='widthf4'>有效期</text>
+      <text class='widthf3'>状态</text>
+
+    </view>
+    <scroll-view scroll-y style="height: 1050rpx">
+      <view wx:for="{{memberList}}" wx:key="{{item.UUID}}" bindtap='bindLineItemTap'  data-selectedmember="{{item}}">
+        <text class='widthf1' style="text-align:center">{{index+1}}</text>
+        <text class='widthf4' style="text-align:center">{{item.alias}}</text>
+        <text class='widthf4' style="text-align:center">{{item.lastName}} {{item.firstName}}</text>
+        <text class='widthf4' style="text-align:center">{{item.validTo}}</text>
+        <text class='widthf3' style="text-align:center">{{item.statusDec}}</text>        
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+
+  </swiper-item>
+
+  <swiper-item>
+
+  </swiper-item>
+
+  <swiper-item>
+
+  </swiper-item>
+</swiper>
+

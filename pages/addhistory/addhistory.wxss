@@ -1,0 +1,7 @@
+/* pages/addhistory/addhistory.wxss */
+
+.warning {
+  text-align: center;
+  font-size: small; 
+  color: red;
+}

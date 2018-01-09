@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/logs/logs",
+    "pages/dashboard/dashboard",
+    "pages/register/register",
+    "pages/changeprofile/changeprofile",
+    "pages/addhistory/addhistory",
+    "pages/admin/admin",
+    "pages/admin_members/admin_members"
+  ],
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_s.png",
+        "text": "拖家带口"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "images/main.png",
+        "selectedIconPath": "images/main_s.png",
+        "text": "个人主页"
+      },
+      {
+        "pagePath": "pages/dashboard/dashboard",
+        "iconPath": "images/dashboard.png",
+        "selectedIconPath": "images/dashboard_s.png",
+        "text": "打铁排行"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

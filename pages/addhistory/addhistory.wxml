@@ -1,0 +1,42 @@
+<!--pages/addhistory/addhistory.wxml-->
+
+
+<label class="winTitle">添加个人比赛记录</label>
+
+
+<view class="regitem">
+  <label class="reglabel">日期：</label>
+  <picker class="reginput" mode="date" value="{{matchDate}}" bindchange="bindMatchDateChange">
+    <view > 
+      {{matchDate}}
+    </view>
+  </picker>
+</view>
+<view class="regitem">
+  <label class="reglabel">描述：</label>
+  <input class='reginput' type="text"  bindinput="bindMatchDescriptionChange" maxlength='20' placeholder="如 金堂铁三" value="{{matchDiscription}}" />
+</view>
+
+<view class="regitem">
+  <label class="reglabel">组别：</label>
+  <picker class="reginput" bindchange="bindMatchTypeChange" value="{{matchType}}" range="{{matchTypeList}}">
+    <view >
+      {{matchTypeList[matchType]}}
+    </view>
+  </picker>  
+</view>
+
+<view class="regitem">
+  <label class="reglabel">成绩：</label>
+  <picker class="reginput" mode="multiSelector" value="{{matchTime}}" range='{{matchTimeRange}}'  bindchange="bindTimeChange" bindColumnchange="bindTimeColumnChange">
+    <view > 
+      {{matchTimeRange[0][matchTime[0]]}} {{matchTimeRange[1][matchTime[1]]}} {{matchTimeRange[2][matchTime[2]]}}
+    </view>
+  </picker>
+</view>
+
+<view >
+  <label class="warning" style = 'font-weight:bold;'  >注：记录一旦添加，非发舵主红包无法更改，请确认数据正确！</label>  
+</view>
+
+ <button class="regbutton" bindtap="bindAddPress">添加</button>

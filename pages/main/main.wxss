@@ -1,0 +1,49 @@
+/* pages/main/main.wxss 
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /*padding: 200rpx 0;/*
+  box-sizing: border-box;
+}*/
+
+.blocktitlebar{
+  display: flex;
+  width: 98%;  
+  background-color: lightgray;
+  flex-direction: row; 
+ 
+}
+
+.basicinfoline{
+  display: flex;
+  width: 98%;
+  align-content: flex-start;
+  
+}
+
+.basicinfoitemsf1{
+  flex: 1;
+}
+.basicinfoitemsf2{
+  flex: 2;
+}
+.basicinfoitemsf3{
+  flex: 3;
+}
+
+.matchHistoryTitleBar{  
+  display: flex;
+  width: 98%!Important;
+  text-align:center!Important;
+  font-weight: bold;
+  font-size: mormal!Important;    
+  background-color: lightgrey;
+
+}
+
+
+

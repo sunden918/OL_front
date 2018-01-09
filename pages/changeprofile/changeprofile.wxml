@@ -1,0 +1,50 @@
+<!--pages/regster/register.wxml-->
+
+
+<label class="winTitle">修改资料</label>
+
+<view class="regitem">
+  <label class="reglabel">昵称：</label>
+  <input class='reginput' type="text"  bindinput="bindAliasChange" maxlength='10' placeholder="5汉字 或10字符" value="{{alias}}" />
+</view>
+
+<view class="regitem">
+  <label class="reglabel">姓：</label>
+  <input class='reginput' bindinput="bindLnameChange" placeholder="2汉字" maxlength="{{maxLnameLength}}" value="{{lastName}}" type="text" />
+</view>
+
+<view class="regitem">
+  <label class="reglabel">名：</label>
+  <input class='reginput' bindinput="bindFnameChange" value="{{lastFame}}" placeholder="2汉字" maxlength="{{maxFnameLength}}" value="{{firstName}}"type="text" />  
+</view>
+
+<view class="regitem">
+  <label class="reglabel">手机：</label>
+  <input class='reginput' bindinput="bindTelChange" bindblur="bindTelCheck" maxlength='11' type="number" value='{{telephone}}'/>  
+</view>
+<view class="regitem">
+  <label class="reglabel">邮箱：</label>
+  <input class='reginput' bindinput="bindMailChange" bindblur="bindMailCheck" type="text" value="{{email}}"/>  
+</view>
+
+<view class="regitem">
+  <label class="reglabel">性别：</label>
+  <picker class="reginput" bindchange="bindGenderChange" value="{{sex}}" range="{{gender}}">
+    <view >
+      {{gender[sex]}}
+    </view>
+  </picker>  
+</view>
+
+<view class="regitem">
+  <label class="reglabel">生日：</label>
+  <picker class="reginput" mode="date" value="{{birthday}}" bindchange="bindDateChange">
+    <view > 
+      {{birthday}}
+    </view>
+  </picker>
+</view>
+
+
+ <button class="regbutton" bindtap="bindSavePress">保存</button>
+

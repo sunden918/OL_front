@@ -1,0 +1,185 @@
+/**app.wxss**/
+
+@import '/lib/icon/font.wxss';
+
+@font-face {
+  font-family: 'iconfont';  /* project id 507622 */
+  src: url('//at.alicdn.com/t/font_507622_jalognpmtdpfogvi.eot');
+  src: url('//at.alicdn.com/t/font_507622_jalognpmtdpfogvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_507622_jalognpmtdpfogvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_507622_jalognpmtdpfogvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_507622_jalognpmtdpfogvi.svg#iconfont') format('svg');
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  box-sizing: border-box;
+  
+} 
+
+.blocktitlebar{
+  display: flex;
+  width: 98%;  
+
+  flex-direction: row;   
+  
+}
+
+.blocktitletext{ 
+  width: 90%;
+  font-size:x-large;  
+}
+
+.blocktitleicon{   
+align-content: flex-end;
+height: auto;
+width: 30px;
+background-color: white;
+
+}
+
+
+
+
+
+.widthf1{
+  flex: 1;
+}
+
+.widthf2{
+  flex: 2;
+}
+
+.widthf3{
+  flex: 3;
+}
+
+.widthf4{
+  flex: 4;
+}
+.widthf5{
+  flex: 5;  
+}
+.widthf6{
+  flex: 6;  
+}
+.widthf7{
+  flex: 7;  
+}
+.widthf8{
+  flex: 8;  
+}
+.widthf9{
+  flex: 9;  
+}
+.widthf10{
+  flex: 10;  
+}
+.widthf11{
+  flex: 11;  
+}
+.widthf12{
+  flex: 12;  
+}
+
+.matchHistoryTitleBar{  
+  display: flex;
+  text-align:center!Important;
+  font-size: mormal;    
+  font-weight: bold;
+  background-color: lightgrey;
+}
+
+.swiper-tab{ 
+  width: 100%; 
+  border-bottom: 2rpx solid #eeeeee; 
+  text-align: center; 
+  line-height: 80rpx;
+} 
+.swiper-tab-item{  
+  display: inline-block; 
+  width: 25%; 
+  color: #666666; 
+  font-weight: bold;
+  font-size: large;
+} 
+.on{ 
+  color: #f10b2e; 
+  border-bottom: 5rpx solid grey;
+  border-top: 5rpx solid grey;
+  font-size:x-large; 
+  border-radius: 5%;
+  background-color: lightgrey;   
+  } 
+ 
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; } 
+.swiper-box view{ 
+  display: flex;
+  text-align: left; 
+  font-size:medium;
+  border-bottom: 1rpx solid #eeeeee;
+  
+}
+
+
+
+.winTitle {
+  display: flex;
+  flex-direction: column;
+  height: 80rpx;
+  align-items: center; 
+  font-size: x-large; 
+  background-color: lightgrey; 
+  margin-bottom: 10px; 
+}
+
+.regitem {
+  
+  display: flex;
+  flex-direction:  row;
+  align-items: right;
+  justify-content: space-between;
+  margin:5;
+  margin-bottom: 5px;
+  font-size:  x-large;
+ 
+}
+
+.reglabel{
+  text-align: right;
+  font-size:  x-large;
+  flex: 2.5;
+  width: 100%;
+}
+
+.regtext{
+  text-align: right;
+  font-size:  x-large;
+  flex: 2.5;
+   width: 100%;
+  
+}
+
+.reginput{  
+  flex: 5.5;  
+  background-color: #ebebeb;
+  align-self: center;
+  font-size: large;
+  height: 100%;
+}
+
+.regnote{
+  flex: 3;  
+  font-size:  small;
+  
+}
+.regbutton{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center; 
+
+}

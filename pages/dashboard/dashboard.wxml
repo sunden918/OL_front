@@ -1,0 +1,76 @@
+<!--pages/dashboard/dashboard.wxml-->
+<!--
+<view class="container">
+  <view class='blocktitlebar'>
+    <text class='blocktitletext'>拖家带口风云榜</text>
+  </view>
+</view>
+-->
+
+<image src="/images/dashboardbanner_b.jpg" mode="widthFix" style='width:100%'> </image>
+
+<view class="swiper-tab">
+  <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">半标</view>
+  <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">标铁</view>
+  <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">703</view>
+  <view class="swiper-tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">大铁</view>
+
+</view>
+
+<view class='matchHistoryTitleBar'>
+  <text class='widthf1'></text>
+  <text class='widthf3'>成绩</text>
+  <text class='widthf5'>爱称</text>
+  <text class='widthf3'>日期</text>
+  <text class='widthf6'>比赛</text>
+
+
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:830rpx" bindchange="bindChange">
+  <swiper-item>
+    <scroll-view scroll-y style="height: 830rpx">
+      <view wx:for="{{clubMatchHistory.gt257}}" wx:key="*this" style= "color:{{item.colorByGender}}" >
+        <text class='widthf1' style="text-align:center">{{index+1}}</text>
+        <text class='widthf3' style="text-align:center">{{item.score}}</text>
+        <text class='widthf5' style="text-align:center">{{item.memberId}}</text>
+        <text class='widthf10'>{{item.competitionName}}</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y style="height: 830rpx">
+      <view scroll-y wx:for="{{clubMatchHistory.gt515}}" wx:key="*this" style= "color:{{item.colorByGender}}" >
+        <text class='widthf1' style="text-align:center">{{index+1}}</text>
+        <text class='widthf3' style="text-align:center">{{item.score}}</text>
+        <text class='widthf5' style="text-align:center">{{item.memberId}}</text>
+        <text class='widthf10'>{{item.competitionName}}</text>
+
+        
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y style="height: 830rpx">
+      <view wx:for="{{clubMatchHistory.gt113}}" wx:key="*this" style= "color:{{item.colorByGender}}" >
+        <text class='widthf1' style="text-align:center">{{index+1}}</text>
+        <text class='widthf3' style="text-align:center">{{item.score}}</text>
+        <text class='widthf5' style="text-align:center">{{item.memberId}}</text>
+        <text class='widthf9'>{{item.competitionName}}</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y style="height: 830rpx">
+      <view wx:for="{{clubMatchHistory.gt226}}" wx:key="*this" style= "color:{{item.colorByGender}}" >
+        <text class='widthf1' style="text-align:center">{{index+1}}</text>
+        <text class='widthf3' style="text-align:center">{{item.score}}</text>
+        <text class='widthf5' style="text-align:center">{{item.memberId}}</text>
+        <text class='widthf9'>{{item.competitionName}}</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

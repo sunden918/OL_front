@@ -1,0 +1,32 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+.broadcasting{
+  width: 100%;
+  flex-direction: row;
+  align-content: center;
+  border-bottom:1rpx dotted;
+  
+}
+.clubintro {
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  
+}

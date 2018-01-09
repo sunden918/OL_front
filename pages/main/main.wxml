@@ -1,0 +1,100 @@
+<!--pages/main/main.wxml-->
+
+<view class="container">
+  <view class='blocktitlebar'>
+    <text class='blocktitletext'>会员信息</text>
+    <text class='iconfont icon-edit' bindtap="bindModifyProfile"></text>
+
+  </view>
+  <view class='basicinfoline'>
+    <text class='widthf1' style='font-weight: bold;'>姓名：</text>
+    <text class='widthf2'>{{memberInfo.lastName}} {{memberInfo.firstName}}</text>
+    <text class='widthf1' style='font-weight: bold;'>昵称：</text>
+    <text class='widthf2'>{{memberInfo.alias}}</text>
+  </view>
+  <view class='basicinfoline'>
+    <text class='widthf1' style='font-weight: bold;'>状态：</text>
+    <text class='widthf2' style='color: {{statusColor}}; font-weight: {{statusWeight}};'>{{memberInfo.statusDec}}</text>
+    <text class='widthf1' style='font-weight: bold;'>会籍：</text>
+    <text class='widthf2'>{{memberInfo.validTo}}</text>
+  </view>
+
+
+  <view class='blocktitlebar'>
+    <text class='blocktitletext'>个人记录</text>
+  </view>
+  <view class='basicinfoline'>
+    <text class='widthf3' style='font-weight: bold;'>半标：</text>
+    <text class='widthf5'>{{memberPB.pb257}}</text>
+    <text class='widthf3' style='font-weight: bold;'>标铁：</text>
+    <text class='widthf5'>{{memberPB.pb515}}</text>
+  </view>
+  <view class='basicinfoline'>
+    <text class='widthf3' style='font-weight: bold;'>703：</text>
+    <text class='widthf5'>{{memberPB.pb113}}</text>
+    <text class='widthf3' style='font-weight: bold;'>大铁：</text>
+    <text class='widthf5'>{{memberPB.pb226}}</text>
+  </view>
+
+
+  <view class='blocktitlebar'>
+    <text class='blocktitletext'>个人赛史</text>
+    <text class='iconfont icon-add' bindtap="bindAddHistory"></text>
+  </view>
+
+  <view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">半标</view>
+    <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">标铁</view>
+    <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">703</view>
+    <view class="swiper-tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">大铁</view>
+  </view>
+  <view class='matchHistoryTitleBar' style='width:100%'>
+    <text class='widthf1'>No.</text>
+    <text class='widthf3'>日期</text>
+    <text class='widthf3'>成绩</text>
+    <text class='widthf5'>比赛信息</text>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:580rpx" bindchange="bindChange">
+    <swiper-item>
+      <scroll-view scroll-y style="height: 580rpx">
+        <view class="matchHistoryLine" wx:for="{{memberMHistory.gt257}}" wx:key="*this">
+          <text class='widthf1' style="text-align:center">{{index+1}}</text>
+          <text class='widthf3'>{{item.competitionDate}}</text>
+          <text class='widthf3' style="text-align:center">{{item.score}}</text>
+          <text class='widthf5'>{{item.competitionName}}</text>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y style="height: 580rpx">
+        <view class="matchHistoryLine" wx:for="{{memberMHistory.gt515}}" wx:key="*this">
+          <text class='widthf1' style="text-align:center">{{index+1}}</text>
+          <text class='widthf3'>{{item.competitionDate}}</text>
+          <text class='widthf3' style="text-align:center">{{item.score}}</text>
+          <text class='widthf5'>{{item.competitionName}}</text>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y style="height: 580rpx">
+        <view class="matchHistoryLine" wx:for="{{memberMHistory.gt113}}" wx:key="*this">
+          <text class='widthf1' style="text-align:center">{{index+1}}</text>
+          <text class='widthf3'>{{item.competitionDate}}</text>
+          <text class='widthf3' style="text-align:center">{{item.score}}</text>
+          <text class='widthf5'>{{item.competitionName}}</text>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y style="height: 580rpx">
+        <view class="matchHistoryLine" wx:for="{{memberMHistory.gt226}}" wx:key="*this">
+          <text class='widthf1' style="text-align:center">{{index+1}}</text>
+          <text class='widthf3'>{{item.competitionDate}}</text>
+          <text class='widthf3' style="text-align:center">{{item.score}}</text>
+          <text class='widthf5'>{{item.competitionName}}</text>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+</view>
